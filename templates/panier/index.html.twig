@@ -1,0 +1,65 @@
+{% extends 'front.html.twig' %}
+
+{% block title %}Panier  {{ total }}{% endblock %}
+
+{% block body %}
+
+        <section class="section" id="products">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-heading">
+                            <h2>Panier : {{ total }}TND</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    {% for element in dataPanier %}
+                        <div class="col-lg-4">
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="{{path("addPanierPanier", {id: element.produit.idoeuvre})}}">Add<i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="{{path("remove", {id: element.produit.idoeuvre})}}"><i class="fa fa-remove">Delete</i></a></li>
+                                            <li><a href="{{path("delete", {id: element.produit.idoeuvre})}}"><i>DeleteAll</i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="{{ asset('Upload/')}}{{ element.produit.image }}" alt="">
+                                </div>
+                                <div class="down-content">
+                                    <h4>{{ element.produit.nom }}</h4>
+                                    <span>Prix: {{ element.produit.prix }}TND</span>
+                                    <span>Total :{{ element.quantite * element.produit.prix }}TND</span>
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </section><br> <br><br><br><br><br>
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+

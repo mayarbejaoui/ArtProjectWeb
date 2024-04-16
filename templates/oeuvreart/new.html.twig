@@ -1,0 +1,39 @@
+{% extends 'back.html.twig' %}
+
+{% block title %}New Oeuvreart{% endblock %}
+
+{% block body %}
+    {{ form_start(form)}}
+    <div class="input-group input-group-outline my-3">
+
+        {{ form_widget(form.nom, { 'attr': {'class':'form-control', 'placeholder': 'Nom'}}) }}<br>
+        {{ form_errors(form.nom) }}<br>
+    </div>
+    <div class="input-group input-group-outline my-3">
+        {{ form_widget(form.description, { 'attr': {'class':'form-control', 'placeholder': 'Description'}}) }}<br>
+        {{ form_errors(form.description) }}<br>
+    </div>
+        <div class="input-group input-group-outline my-3">
+        {{ form_widget(form.prix, { 'attr': {'class':'form-control', 'placeholder': 'Prix'}}) }}<br>
+            {{ form_errors(form.prix) }}<br>
+        </div>
+            <div class="input-group input-group-outline my-3">
+        {{ form_widget(form.quantite, { 'attr': {'class':'form-control', 'placeholder': 'Quantite'}}) }}<br>
+                {{ form_errors(form.quantite) }}<br>
+            </div>
+                <div class="input-group input-group-outline my-3">
+        {{ form_widget(form.certif, { 'attr': {'class':'form-control', 'placeholder': 'Certicat'}}) }}<br>
+                    {{ form_errors(form.certif) }}<br>
+                </div>
+                    <div class="input-group input-group-outline my-3">
+        {{ form_widget(form.file, { 'attr': {'class':'form-control', 'placeholder': 'Image'}}) }}<br>
+                    </div>
+                        <div class="input-group input-group-outline my-3">
+        {{ form_widget(form.idCat, { 'attr': {'class':'form-control', 'placeholder': 'Categorie'}}) }}<br>
+
+        <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2" style="text-align: center !important;" formnovalidate>Ajouter</button>
+    </div>
+
+
+    {{ form_end(form)}}
+{% endblock %}
