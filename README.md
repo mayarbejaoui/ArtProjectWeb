@@ -1,0 +1,1 @@
+Notre application innovante facilite l'achat et la vente d'œuvres d'art, offrant aux utilisateurs une plateforme conviviale pour découvrir et acquérir des pièces uniques. Avec une interface intuitive et sécurisée, notre application connecte les amateurs d'art avec des artistes émergents et établis, offrant une expérience immersive pour les collectionneurs et les créateurs d'art
